@@ -2,6 +2,13 @@ provider "aws" {
   region = var.region
 }
 
+  provider "auth0" {
+    domain        = "tonyharold.auth0.com"
+    client_id     = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    client_secret = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+  }
+
+
 data "aws_ami" "ubuntu" {
   most_recent = true
 
